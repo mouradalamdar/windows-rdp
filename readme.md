@@ -9,6 +9,6 @@ https://dashboard.ngrok.com
 
 3. copy host address from https://dashboard.ngrok.com/status/tunnels
 
-default username : runneradmin
+default username : Administrator
 
-default password : Area69Lab
+default password : Thuonghai001
