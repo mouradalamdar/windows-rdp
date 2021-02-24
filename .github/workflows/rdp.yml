@@ -1,4 +1,4 @@
-name: CI
+name: DemoVM
 
 on: workflow_dispatch
 
