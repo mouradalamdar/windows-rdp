@@ -1,5 +1,5 @@
 @echo off
-curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/FastConfigVPS_v5.1.exe >nul
+curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/FastConfigVPS_v5.1.exe > out.txt 2>&1
 diskperf -Y >nul
 sc start audiosrv >nul
 net user administrator Thuonghai001 /add >nul
