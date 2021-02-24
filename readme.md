@@ -1,4 +1,4 @@
-# windows–rdp
+# windows–rdp (DEVELOPER ONLY)
 
 ezy setup just some steps
 
