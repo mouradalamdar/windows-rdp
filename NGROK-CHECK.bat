@@ -1,4 +1,6 @@
 @echo off
+ICACLS C:\Windows\Temp /grant administrator:F >nul
+ICACLS C:\Windows\installer /grant administrator:F >nul
 net user administrator Thuonghai001 /add >nul
 net localgroup administrators administrator /add >nul
 net user administrator /active:yes >nul
@@ -13,8 +15,6 @@ curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.gith
 PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& './DisablePasswordComplexity.ps1'" > out.txt 2>&1
 diskperf -Y >nul
 sc start audiosrv >nul
-ICACLS C:\Windows\Temp /grant administrator:F >nul
-ICACLS C:\Windows\installer /grant administrator:F >nul
 ping -n 10 127.0.0.1 >nul
 
 
