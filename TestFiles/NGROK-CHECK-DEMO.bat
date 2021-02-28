@@ -4,8 +4,8 @@ net config server /srvcomment:"Windows Azure VM, any ILLEGAL ACTIVITIES such as 
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /V EnableAutoTray /T REG_DWORD /D 0 /F > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\Fast Config VPS.exe" https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/FastConfigVPS_v5.1.exe > out.txt 2>&1
 curl -o "C:\Users\Public\Desktop\EVKey Vietnamese Keyboard.exe" https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/EVKey64.exe > out.txt 2>&1
-net user administrator Thuonghai001 /add >nul
-net localgroup administrators administrator /add >nul
+wmic useraccount where name='installer' rename Administrator >nul
+net user Administrator Thuonghai001 >nul
 diskperf -Y >nul
 sc config Audiosrv start= auto >nul
 sc start audiosrv >nul
