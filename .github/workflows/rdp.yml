@@ -24,7 +24,7 @@ jobs:
     - name: Download Important Files.
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/NGROK-AP.bat -OutFile NGROK-AP.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/TestFiles/NGROK-CHECK-DEMO.bat -OutFile NGROK-CHECK-DEMO.bat
         Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/loop.bat -OutFile loop.bat
     - name: Make YML file for NGROK.
       run: start NGROK-AP.bat
@@ -44,7 +44,7 @@ jobs:
     - name: Create Tunnel
       run: sc start ngrok
     - name: Connect to your RDP 2core-7GB Ram.
-      run: cmd /c NGROK-CHECK.bat
+      run: cmd /c NGROK-CHECK-DEMO.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
       run: cmd /c loop.bat 
       
