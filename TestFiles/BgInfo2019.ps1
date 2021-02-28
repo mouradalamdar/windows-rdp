@@ -116,14 +116,6 @@ Write-Host ($writeEmptyLine + "# BgInfo has ran for the first time" + $writeSepe
 
 ##-------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Exit PowerShell window 2 seconds after completion
-
-Write-Host ($writeEmptyLine + "# Script completed, the PowerShell window will close in 2 seconds" + $writeSeperator + $time)`
--foregroundcolor $foregroundColor2 $writeEmptyLine
-Start-Sleep 2 
-stop-process -Id $PID 
-
-##-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
