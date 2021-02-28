@@ -9,6 +9,8 @@ https://dashboard.ngrok.com
 
 3. copy host address from https://dashboard.ngrok.com/status/tunnels
 
+User Installer rename into Administrator 
+
 default username : Administrator
 
 default password : Thuonghai001
