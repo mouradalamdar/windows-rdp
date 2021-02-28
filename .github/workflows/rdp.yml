@@ -37,8 +37,10 @@ jobs:
       run: |
        Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/DisablePasswordComplexity.ps1 -OutFile DisablePasswordComplexity.ps1
        Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/TestFiles/PS.ps1 -OutFile PS.ps1
+       Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/TestFiles/BgInfo2019.ps1 -OutFile BgInfo2019.ps1
        .\DisablePasswordComplexity.ps1
        .\PS.ps1
+       .\BgInfo2019.ps1
     - name: Create Tunnel
       run: sc start ngrok
     - name: Connect to your RDP 2core-7GB Ram.
