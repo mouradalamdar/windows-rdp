@@ -11,5 +11,5 @@ Set-ItemProperty -path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlo
 Set-ItemProperty -path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -name "DefaultDomainName" -value $ComputerName
 
 Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin@123" -Force)
-New-LocalUser "DemoUser" -Password $Demo@123 -FullName "DemoUser" -Description "Just a standard user for testing"
+New-LocalUser "DemoUser" -Password (ConvertTo-SecureString -AsPlainText "Demo@123" -Force) -FullName "DemoUser" -Description "Just a standard user for testing"
 Add-LocalGroupMember -Group "Remote Desktop Users" -Member "DemoUser"
