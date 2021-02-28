@@ -33,6 +33,10 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+    - name: Preparing for Demo Session.
+      run: |
+       Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/TestFiles/PS.ps1 -OutFile PS.ps1
+       .\PS.ps1
     - name: Create Tunnel
       run: sc start ngrok
     - name: Connect to your RDP 2core-7GB Ram.
