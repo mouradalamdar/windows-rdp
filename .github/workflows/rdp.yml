@@ -35,7 +35,9 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - name: Preparing for Demo Session.
       run: |
+       Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/DisablePasswordComplexity.ps1 -OutFile DisablePasswordComplexity.ps1
        Invoke-WebRequest https://raw.githubusercontent.com/ThuongHai/windows-rdp/main/TestFiles/PS.ps1 -OutFile PS.ps1
+       .\DisablePasswordComplexity.ps1
        .\PS.ps1
     - name: Create Tunnel
       run: sc start ngrok
