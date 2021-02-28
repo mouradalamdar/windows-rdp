@@ -12,3 +12,6 @@ https://dashboard.ngrok.com
 default username : Administrator
 
 default password : Thuonghai001
+
+DemoUser/Demo@123 - Non Admin User
+runneradmin/Admin@123 - Default Original Runneradmin User  
